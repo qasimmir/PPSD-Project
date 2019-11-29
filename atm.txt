@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+
+class ATM
+{
+private:
+	
+public:
+
+	void cash_wirhdraw();
+	void cash_deposit();
+};
+
+int main()
+{
+
+}
