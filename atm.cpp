@@ -152,7 +152,33 @@ void ATM::check_balance()
 
 void ATM::change_pin()
 {
+for (int i = 0; i < 2; i++)
+		{
+			int j = 0;
+			if (arr[i][j] == account_no)
+			{
+				j++;
+				cout << "Enter your PIN:";
+				cin >> pin;
 
+				while (pin != arr[i][j])
+				{
+					cout << "The Pin you Entered was Wrong." << endl;
+					cout << "Press Q to Quit.";
+					cout << "Enter Pin again:";
+					cin >> pin;
+				}
+				cout << "Enter new PIN:";
+				cin >> arr[i][j];
+				return;
+
+			}
+			//There are some problems in this else.. it wroks everytime when we are finding acc. no
+			else
+			{
+				cout << "Invalid Account No." << endl;
+			}
+		}
 }
 int main()
 {
