@@ -60,8 +60,25 @@ int main()
 		cout << endl << "Enter Here:";
 		cin >> option;
 		cout << endl;
+if (option == 'W' || option == 'w')
+{
+    //write code here
+}
+if (option == 'D' || option == 'd')
+{
+    //write code here
+}
+if (option == 'B' || option == 'b')
+{
+    //write code here
+}
+    if (option == 'P' || option == 'p')
+    {
+        //write code here
+    }
 
 		cout << endl << "If you want to continue with another activity than press C:";
+
 		cin >> repeat;
 
 	} while (repeat == 'C' || repeat == 'c');
