@@ -92,7 +92,12 @@ void ATM::cash_deposit(string account_no)
 					cin >> pin;
 				}
 				j++;
+				cout << "Enter the amount you want to deposit:";
+				cin >> amount;
 
+				convert = stoi(arr[i][j]);
+				amount = convert + amount;
+				arr[i][j] = to_string(amount);
 
 			}
 			else
