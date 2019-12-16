@@ -6,7 +6,7 @@ using namespace std;
 class ATM
 {
 private:
-    	int value, index;
+    int value, index;
 	int amount, convert;
 	string  pin,input;
 	string arr[2][3];
@@ -51,6 +51,7 @@ int main()
 {
 	ATM obj;
 	char option, repeat;
+    string account_no;
 
 	do{
 		cout << "Enter W to Withdraw Cash" << endl;
