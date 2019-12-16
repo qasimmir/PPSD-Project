@@ -49,8 +49,21 @@ void ATM::cash_withdrawal()
 					cout << "Enter Pin again:";
 					cin >> pin;
 				}
+				j++;
+				cout << "Enter the amount you want to Withdraw:";
+				cin >> amount;
 
+				convert = stoi(arr[i][j]);
 
+				if (convert >= amount)
+				{
+					amount = convert - amount;
+					arr[i][j] = to_string(amount);
+				}
+				else
+				{
+					cout << "You have insufficient balance for this withdrawl.";
+				}
 
 			}
 			else
