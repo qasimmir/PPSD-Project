@@ -229,7 +229,6 @@ int main()
 			cout << "Enter your Account NO.:";
 			cin >> account_no;
 			obj.cash_withdrawal(account_no);
-				obj.display();
 			obj.save_to_file();
 		}
 		if (option == 'D' || option == 'd')
@@ -237,7 +236,6 @@ int main()
 			cout << "Enter your Account NO.:";
 			cin >> account_no;
 			obj.cash_deposit(account_no);
-				obj.display();
 			obj.save_to_file();
 		}
 
@@ -246,7 +244,7 @@ int main()
 			cout << "Enter your Account NO.:";
 			cin >> account_no;
 			obj.check_balance(account_no);
-				obj.display();
+
 			obj.save_to_file();
 		}
 
@@ -255,7 +253,6 @@ int main()
 			cout << "Enter your Account NO.:";
 			cin >> account_no;
 			obj.change_pin(account_no);
-				obj.display();
 			obj.save_to_file();
 		}
 
