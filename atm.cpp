@@ -6,7 +6,12 @@ using namespace std;
 class ATM
 {
 private:
-   
+    	int value, index;
+	int amount, convert;
+	string  pin,input;
+	string arr[2][3];
+
+
 public:
 
 	void load_file();
