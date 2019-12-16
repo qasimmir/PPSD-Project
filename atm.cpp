@@ -12,6 +12,33 @@ private:
 	string arr[2][3];
 public:
 
+	void load_file()
+	{
+		fstream file;
+		file.open("C:\\Users\\Qasim Mir\\Desktop\\data.txt");
+		if (file.is_open())
+		{
+			file >> input;
+			while (!file.eof())
+			{
+				for (int i = 0; i < 2; i++)
+				{
+					for (int j = 0; j < 3; j++)
+					{
+						arr[i][j] = input;
+						file >> input;
+					}
+				}
+			}
+		}
+		else
+			cout << "File is unable to open" << endl << endl;
+		file.close();
+
+	}
+
+
+
 	void cash_withdrawal();
 	void cash_deposit();
 	void check_balance();
