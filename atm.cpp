@@ -22,7 +22,31 @@ public:
 	void change_pin();
 
 };
+void ATM::load_file()
+{
 
+}
+void ATM::save_to_file()
+{
+
+}
+void ATM::cash_withdrawal()
+{
+
+}
+void ATM::cash_deposit()
+{
+
+}
+void ATM::check_balance()
+{
+
+}
+
+void ATM::change_pin()
+{
+
+}
 int main()
 {
 	ATM obj;
