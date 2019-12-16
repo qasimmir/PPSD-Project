@@ -37,7 +37,29 @@ public:
 
 	}
 
+    	void save_to_file()
+	{
+		fstream file;
+		file.open("C:\\Users\\Qasim Mir\\Desktop\\data.txt", ios::out | ios::trunc);
 
+		if (file.is_open())
+		{
+			for (int i = 0; i < 2; i++)
+			{
+				for (int j = 0; j < 3; j++)
+				{
+					file << arr[i][j] << endl;
+				}
+				file << endl;
+			}
+			cout << "Data sent to file.." << endl << endl;
+
+		}
+		else
+			cout << "File is not able to open";
+
+		file.close();
+	}
 
 	void cash_withdrawal();
 	void cash_deposit();
