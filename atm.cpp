@@ -35,19 +35,27 @@ int main()
 		cout << endl;
         if (option == 'W' || option == 'w')
         {
-            //write here
+			cout << "Enter your Account NO.:";
+			cin >> account_no;
+			obj.cash_withdrawal(account_no);
         }
         if (option == 'D' || option == 'd')
 		{
-		    //write here
+			cout << "Enter your Account NO.:";
+			cin >> account_no;
+			obj.cash_deposit(account_no);
 		}
         if (option == 'B' || option == 'b')
 		{
-		    //write here
+			cout << "Enter your Account NO.:";
+			cin >> account_no;
+			obj.check_balance(account_no);
         }
         if (option == 'P' || option == 'p')
 		{
-		    //write here
+			cout << "Enter your Account NO.:";
+			cin >> account_no;
+			obj.change_pin(account_no);
         }
 		cout << endl << "If you want to continue with another activity than press C:";
 		cin >> repeat;
