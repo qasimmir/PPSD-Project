@@ -331,6 +331,12 @@ int main()
 			obj.save_to_file();
 		}
 
+        if (option == 'T' || option == 't')
+        {
+            cout << "Enter your Account NO.:";
+            cin >> account_no;
+            obj.Transfer_amount(account_no);
+        }
 
 		cout << endl << "If you want to continue with another activity than press C:";
 		cin >> repeat;
