@@ -212,6 +212,8 @@ int main()
 	char option, repeat;
     string account_no;
 
+    obj.load_file();
+
 	do{
 		cout << "Enter W to Withdraw Cash" << endl;
 		cout << "Enter D to deposit Cash" << endl;
@@ -227,12 +229,16 @@ int main()
 			cout << "Enter your Account NO.:";
 			cin >> account_no;
 			obj.cash_withdrawal(account_no);
+				obj.display();
+			obj.save_to_file();
 		}
 		if (option == 'D' || option == 'd')
 		{
 			cout << "Enter your Account NO.:";
 			cin >> account_no;
 			obj.cash_deposit(account_no);
+				obj.display();
+			obj.save_to_file();
 		}
 
 		if (option == 'B' || option == 'b')
@@ -240,6 +246,8 @@ int main()
 			cout << "Enter your Account NO.:";
 			cin >> account_no;
 			obj.check_balance(account_no);
+				obj.display();
+			obj.save_to_file();
 		}
 
 		if (option == 'P' || option == 'p')
@@ -247,6 +255,8 @@ int main()
 			cout << "Enter your Account NO.:";
 			cin >> account_no;
 			obj.change_pin(account_no);
+				obj.display();
+			obj.save_to_file();
 		}
 
 		cout << endl << "If you want to continue with another activity than press C:";
