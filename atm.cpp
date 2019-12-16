@@ -254,6 +254,16 @@ public:
     return;
     }
 
+    for (int i = 0; i < 2; i++)
+    {
+    if (arr[i][0] == transfer)
+    {
+    convert = stoi(arr[i][2]);
+    T_amount = convert + T_amount;
+    arr[i][3] = to_string(T_amount);
+    return;
+    }
+    }
 
     }
     else
