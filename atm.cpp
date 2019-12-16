@@ -36,7 +36,7 @@ public:
 		file.close();
 
 	}
-
+//This functions saves the file in .txt file
     	void save_to_file()
 	{
 		fstream file;
