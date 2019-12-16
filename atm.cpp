@@ -60,22 +60,34 @@ int main()
 		cout << endl << "Enter Here:";
 		cin >> option;
 		cout << endl;
-if (option == 'W' || option == 'w')
-{
-    //write code here
-}
-if (option == 'D' || option == 'd')
-{
-    //write code here
-}
-if (option == 'B' || option == 'b')
-{
-    //write code here
-}
-    if (option == 'P' || option == 'p')
-    {
-        //write code here
-    }
+
+
+		if (option == 'W' || option == 'w')
+		{
+			cout << "Enter your Account NO.:";
+			cin >> account_no;
+			obj.cash_withdrawal(account_no);
+		}
+		if (option == 'D' || option == 'd')
+		{
+			cout << "Enter your Account NO.:";
+			cin >> account_no;
+			obj.cash_deposit(account_no);
+		}
+
+		if (option == 'B' || option == 'b')
+		{
+			cout << "Enter your Account NO.:";
+			cin >> account_no;
+			obj.check_balance(account_no);
+		}
+
+		if (option == 'P' || option == 'p')
+		{
+			cout << "Enter your Account NO.:";
+			cin >> account_no;
+			obj.change_pin(account_no);
+		}
 
 		cout << endl << "If you want to continue with another activity than press C:";
 
