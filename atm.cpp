@@ -21,7 +21,21 @@ public:
 int main()
 {
 	ATM obj;
+	char option, repeat;
 
+	do{
+		cout << "Enter W to Withdraw Cash" << endl;
+		cout << "Enter D to deposit Cash" << endl;
+		cout << "Enter B to check balance" << endl;
+		cout << "Enter P to change your PIN" << endl;
+		cout << endl << "Enter Here:";
+		cin >> option;
+		cout << endl;
+
+		cout << endl << "If you want to continue with another activity than press C:";
+		cin >> repeat;
+
+	} while (repeat == 'C' || repeat == 'c');
 
 
 
