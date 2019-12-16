@@ -33,6 +33,32 @@ void ATM::save_to_file()
 void ATM::cash_withdrawal()
 {
 
+		for (int i = 0; i < 2; i++)
+		{
+			int j = 0;
+			if (arr[i][j] == account_no)
+			{
+				j++;
+				cout << "Enter your PIN:";
+				cin >> pin;
+
+				while (pin != arr[i][j])
+				{
+					cout << "The Pin you Entered was Wrong." << endl;
+					cout << "Press Q to Quit.";
+					cout << "Enter Pin again:";
+					cin >> pin;
+				}
+
+
+
+			}
+			else
+			{
+				cout << "Invalid Account No." << endl;
+			}
+		}
+
 }
 void ATM::cash_deposit()
 {
