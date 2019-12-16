@@ -33,7 +33,22 @@ int main()
 		cout << endl << "Enter Here:";
 		cin >> option;
 		cout << endl;
-
+        if (option == 'W' || option == 'w')
+        {
+            //write here
+        }
+        if (option == 'D' || option == 'd')
+		{
+		    //write here
+		}
+        if (option == 'B' || option == 'b')
+		{
+		    //write here
+        }
+        if (option == 'P' || option == 'p')
+		{
+		    //write here
+        }
 		cout << endl << "If you want to continue with another activity than press C:";
 		cin >> repeat;
 
