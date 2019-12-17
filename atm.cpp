@@ -54,7 +54,7 @@ public:
 				}
 				file << endl;
 			}
-			cout << "Data sent to file.." << endl << endl;
+	
 
 		}
 		else
@@ -111,7 +111,7 @@ public:
 				}
 
 			}
-			//There are some problems in this else.. it wroks everytime when we are finding acc. no
+	
 			else if (i == 9)
 			{
 				cout << "Invalid Account No." << endl;
@@ -146,7 +146,7 @@ public:
 				arr[i][j] = to_string(amount);
 
 			}
-			//There are some problems in this else.. it wroks everytime when we are finding acc. no
+	
 			else if (i == 9)
 			{
 				cout << "Invalid Account No." << endl;
@@ -177,7 +177,7 @@ public:
 				cout << "Your available balance is Rs." << arr[i][j] << endl;
 
 			}
-			//There are some problems in this else.. it wroks everytime when we are finding acc. no
+	
 			else if (i == 9)
 			{
 				cout << "Invalid Account No." << endl;
@@ -208,7 +208,6 @@ public:
 				return;
 
 			}
-			//There are some problems in this else.. it wroks everytime when we are finding acc. no
 			else if (i == 9)
 			{
 				cout << "Invalid Account No." << endl;
