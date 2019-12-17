@@ -1,0 +1,2 @@
+# PPSD-Project
+This is the PPSD semester project in which we have written a code of an ATM Machine. In the code, we load an already written file which includes all the details of many bank accounts. We can then perform different functions of ATM Machine on that data. These functions include cash withdrawal, cash deposit, check balance, change PIN and money transfer from your account to any other account. After the user has performed the changes, these changes are saved to the data file. In this way, the data file is updated and the new details are saved.
