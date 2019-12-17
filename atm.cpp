@@ -112,7 +112,7 @@ public:
 
 			}
 			//There are some problems in this else.. it wroks everytime when we are finding acc. no
-			else
+			else if (i == 9)
 			{
 				cout << "Invalid Account No." << endl;
 			}
@@ -147,7 +147,7 @@ public:
 
 			}
 			//There are some problems in this else.. it wroks everytime when we are finding acc. no
-			else
+			else if (i == 9)
 			{
 				cout << "Invalid Account No." << endl;
 			}
@@ -178,7 +178,7 @@ public:
 
 			}
 			//There are some problems in this else.. it wroks everytime when we are finding acc. no
-			else
+			else if (i == 9)
 			{
 				cout << "Invalid Account No." << endl;
 			}
@@ -209,7 +209,7 @@ public:
 
 			}
 			//There are some problems in this else.. it wroks everytime when we are finding acc. no
-			else
+			else if (i == 9)
 			{
 				cout << "Invalid Account No." << endl;
 			}
@@ -268,7 +268,7 @@ public:
 				}
 
 			}
-			else
+			else if (i == 9)
 			{
 				cout << "Invalid Account No." << endl;
 			}
