@@ -8,7 +8,8 @@ class ATM
 private:
 	int value, index;
 	int amount, convert;
-	string  pin,input;
+	string  pin, input, transfer;
+	int T_amount = 0;
 	string arr[2][3];
 
 public:
@@ -110,6 +111,7 @@ public:
 				}
 
 			}
+			//There are some problems in this else.. it wroks everytime when we are finding acc. no
 			else
 			{
 				cout << "Invalid Account No." << endl;
@@ -144,6 +146,7 @@ public:
 				arr[i][j] = to_string(amount);
 
 			}
+			//There are some problems in this else.. it wroks everytime when we are finding acc. no
 			else
 			{
 				cout << "Invalid Account No." << endl;
@@ -174,6 +177,7 @@ public:
 				cout << "Your available balance is Rs." << arr[i][j] << endl;
 
 			}
+			//There are some problems in this else.. it wroks everytime when we are finding acc. no
 			else
 			{
 				cout << "Invalid Account No." << endl;
@@ -204,6 +208,66 @@ public:
 				return;
 
 			}
+			//There are some problems in this else.. it wroks everytime when we are finding acc. no
+			else
+			{
+				cout << "Invalid Account No." << endl;
+			}
+		}
+	}
+
+	void Transfer_amount(string account_no)
+	{
+		for (int i = 0; i < 2; i++)
+		{
+			int j = 0;
+			if (arr[i][j] == account_no)
+			{
+				j++;
+				cout << "Enter your PIN:";
+				cin >> pin;
+
+				while (pin != arr[i][j])
+				{
+					cout << "The Pin you Entered was Wrong." << endl;
+					cout << "Press Q to Quit.";
+					cout << "Enter Pin again:";
+					cin >> pin;
+				}
+
+				cout << "Enter account number in which you want to transfer:";
+				cin >> transfer;
+
+				j++;
+				cout << "Enter the amount you want to transfer:";
+				cin >> amount;
+
+				convert = stoi(arr[i][j]);
+
+				if (convert >= amount)
+				{
+					T_amount = amount;
+					amount = convert - amount;
+					arr[i][j] = to_string(amount);
+				}
+				else
+				{
+					cout << "You have insufficient balance for this Transfer.";
+					return;
+				}
+
+				for (int i = 0; i < 2; i++)
+				{
+					if (arr[i][0] == transfer)
+					{
+						convert = stoi(arr[i][2]);
+						T_amount = convert + T_amount;
+						arr[i][2] = to_string(T_amount);
+						return;
+					}
+				}
+
+			}
 			else
 			{
 				cout << "Invalid Account No." << endl;
@@ -220,13 +284,13 @@ int main()
 	string account_no;
 
 	obj.load_file();
-	cout << endl << endl;
 
 	do {
 		cout << "Enter W to Withdraw Cash" << endl;
 		cout << "Enter D to deposit Cash" << endl;
 		cout << "Enter B to check balance" << endl;
 		cout << "Enter P to change your PIN" << endl;
+		cout << "Enter T to transfer amount to another account" << endl;
 		cout << endl << "Enter Here:";
 		cin >> option;
 		cout << endl;
@@ -236,38 +300,33 @@ int main()
 			cout << "Enter your Account NO.:";
 			cin >> account_no;
 			obj.cash_withdrawal(account_no);
-			cout << endl;
-			obj.display();
-			obj.save_to_file();
 		}
-
 		if (option == 'D' || option == 'd')
 		{
 			cout << "Enter your Account NO.:";
 			cin >> account_no;
 			obj.cash_deposit(account_no);
-			obj.display();
-			obj.save_to_file();
 		}
-
 		if (option == 'B' || option == 'b')
 		{
 			cout << "Enter your Account NO.:";
 			cin >> account_no;
 			obj.check_balance(account_no);
-			obj.display();
-			obj.save_to_file();
 		}
-
 		if (option == 'P' || option == 'p')
 		{
 			cout << "Enter your Account NO.:";
 			cin >> account_no;
 			obj.change_pin(account_no);
-			obj.display();
-			obj.save_to_file();
+		}
+		if (option == 'T' || option == 't')
+		{
+			cout << "Enter your Account NO.:";
+			cin >> account_no;
+			obj.Transfer_amount(account_no);
 		}
 
+		obj.save_to_file();
 
 		cout << endl << "If you want to continue with another activity than press C:";
 		cin >> repeat;
