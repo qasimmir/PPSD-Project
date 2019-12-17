@@ -14,10 +14,11 @@ private:
 
 public:
 
+	//load_file function loads the data file into the array
 	void load_file()
 	{
 		fstream file;
-		file.open("C:\\Users\\Qasim Mir\\Desktop\\data.txt");
+		file.open("C:\\Users\\Qasim Mir\\Desktop\\data.txt");//change path according to your file location
 		if (file.is_open())
 		{
 			file >> input;
@@ -39,10 +40,11 @@ public:
 
 	}
 
+	//save_to_file function saves the changed array into the data file
 	void save_to_file()
 	{
 		fstream file;
-		file.open("C:\\Users\\Qasim Mir\\Desktop\\data.txt", ios::out | ios::trunc);
+		file.open("C:\\Users\\Qasim Mir\\Desktop\\data.txt", ios::out | ios::trunc);//change path according to your file location
 
 		if (file.is_open())
 		{
@@ -54,7 +56,7 @@ public:
 				}
 				file << endl;
 			}
-	
+
 
 		}
 		else
@@ -63,6 +65,7 @@ public:
 		file.close();
 	}
 
+	// Display function is not used but it is written for resolving any error
 	void display()
 	{
 		for (int i = 0; i < 10; i++)
@@ -75,7 +78,7 @@ public:
 		}
 	}
 
-
+	// Withdrawal function is used to withdraw money
 	void cash_withdrawal(string account_no)
 	{
 		for (int i = 0; i < 10; i++)
@@ -104,14 +107,17 @@ public:
 				{
 					amount = convert - amount;
 					arr[i][j] = to_string(amount);
+					cout << "Withdraw Complete." << endl;
+
 				}
 				else
 				{
 					cout << "You have insufficient balance for this withdrawl.";
 				}
 
+				return;
 			}
-	
+
 			else if (i == 9)
 			{
 				cout << "Invalid Account No." << endl;
@@ -119,6 +125,7 @@ public:
 		}
 	}
 
+	// Deposit function is used to deposit money
 	void cash_deposit(string account_no)
 	{
 		for (int i = 0; i < 10; i++)
@@ -144,9 +151,10 @@ public:
 				convert = stoi(arr[i][j]);
 				amount = convert + amount;
 				arr[i][j] = to_string(amount);
-
+				cout << "Your amount is deposited." << endl;
+				return;
 			}
-	
+
 			else if (i == 9)
 			{
 				cout << "Invalid Account No." << endl;
@@ -154,6 +162,7 @@ public:
 		}
 	}
 
+	// check_balance function is used to check available balance in the account
 	void check_balance(string account_no)
 	{
 		for (int i = 0; i < 10; i++)
@@ -175,9 +184,9 @@ public:
 				j++;
 
 				cout << "Your available balance is Rs." << arr[i][j] << endl;
-
+				return;
 			}
-	
+
 			else if (i == 9)
 			{
 				cout << "Invalid Account No." << endl;
@@ -185,6 +194,7 @@ public:
 		}
 	}
 
+	// change_pin function is used to change pin of your account
 	void change_pin(string account_no)
 	{
 		for (int i = 0; i < 10; i++)
@@ -205,6 +215,9 @@ public:
 				}
 				cout << "Enter new PIN:";
 				cin >> arr[i][j];
+
+				cout << "Your PIN is changed." << endl;
+
 				return;
 
 			}
@@ -215,6 +228,7 @@ public:
 		}
 	}
 
+	// Transfer_amount function is used to Transfer money from your account to any other account
 	void Transfer_amount(string account_no)
 	{
 		for (int i = 0; i < 10; i++)
@@ -262,10 +276,9 @@ public:
 						convert = stoi(arr[i][2]);
 						T_amount = convert + T_amount;
 						arr[i][2] = to_string(T_amount);
-						return;
 					}
 				}
-
+				return;
 			}
 			else if (i == 9)
 			{
