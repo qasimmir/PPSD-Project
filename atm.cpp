@@ -10,7 +10,7 @@ private:
 	int amount, convert;
 	string  pin, input, transfer;
 	int T_amount = 0;
-	string arr[2][3];
+	string arr[10][3];
 
 public:
 
@@ -23,7 +23,7 @@ public:
 			file >> input;
 			while (!file.eof())
 			{
-				for (int i = 0; i < 2; i++)
+				for (int i = 0; i < 10; i++)
 				{
 					for (int j = 0; j < 3; j++)
 					{
@@ -46,7 +46,7 @@ public:
 
 		if (file.is_open())
 		{
-			for (int i = 0; i < 2; i++)
+			for (int i = 0; i < 10; i++)
 			{
 				for (int j = 0; j < 3; j++)
 				{
@@ -65,7 +65,7 @@ public:
 
 	void display()
 	{
-		for (int i = 0; i < 2; i++)
+		for (int i = 0; i < 10; i++)
 		{
 			for (int j = 0; j < 3; j++)
 			{
@@ -78,7 +78,7 @@ public:
 
 	void cash_withdrawal(string account_no)
 	{
-		for (int i = 0; i < 2; i++)
+		for (int i = 0; i < 10; i++)
 		{
 			int j = 0;
 			if (arr[i][j] == account_no)
@@ -121,7 +121,7 @@ public:
 
 	void cash_deposit(string account_no)
 	{
-		for (int i = 0; i < 2; i++)
+		for (int i = 0; i < 10; i++)
 		{
 			int j = 0;
 			if (arr[i][j] == account_no)
@@ -156,7 +156,7 @@ public:
 
 	void check_balance(string account_no)
 	{
-		for (int i = 0; i < 2; i++)
+		for (int i = 0; i < 10; i++)
 		{
 			int j = 0;
 			if (arr[i][j] == account_no)
@@ -187,7 +187,7 @@ public:
 
 	void change_pin(string account_no)
 	{
-		for (int i = 0; i < 2; i++)
+		for (int i = 0; i < 10; i++)
 		{
 			int j = 0;
 			if (arr[i][j] == account_no)
@@ -218,7 +218,7 @@ public:
 
 	void Transfer_amount(string account_no)
 	{
-		for (int i = 0; i < 2; i++)
+		for (int i = 0; i < 10; i++)
 		{
 			int j = 0;
 			if (arr[i][j] == account_no)
@@ -256,7 +256,7 @@ public:
 					return;
 				}
 
-				for (int i = 0; i < 2; i++)
+				for (int i = 0; i < 10; i++)
 				{
 					if (arr[i][0] == transfer)
 					{
